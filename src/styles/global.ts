@@ -1,11 +1,8 @@
-import {
-  GlobalStyleComponent,
-  css,
-  createGlobalStyle,
-  DefaultTheme,
-} from 'styled-components';
+import { css, createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle<DefaultTheme>`
+type GLobalStylesProps = {};
+
+export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -36,6 +33,7 @@ export const GlobalStyles = createGlobalStyle<DefaultTheme>`
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
+      font-family: ${theme.font.family}
     }
   `}
 `;
